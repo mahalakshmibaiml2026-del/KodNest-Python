@@ -52,3 +52,4 @@ print(b+c)
 
 a=27
 print(type(a),a)
+
