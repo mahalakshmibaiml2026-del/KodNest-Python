@@ -86,3 +86,18 @@ print("isspace():", "   ".isspace())     # True (only whitespace)
 
 print("find('Tech'):", s.find("Tech"))
 print("count('o'):", s.count("o"))
+
+
+#slicing
+str = "Python"
+print(str)
+print(str[::])
+print(str[::-1])
+print(str[0:5:-1]) #empty string
+print(str[-2::-2])
+print(str[::-3])
+print(str[-4:-1:1])
+print(str[-4:-1:-1]) #empty string
+print(str[-3:-6:-1])
+print(str[3::-1])
+print(str[-4:])
