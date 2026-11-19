@@ -49,5 +49,89 @@ print(fruits, type(fruits))
 for i in fruits:
     print(i)
 
-fruits.add("orange")  # ERROR - frozenset has no add()
+#fruits.add("orange")  # ERROR - frozenset has no add()
+#print(fruits)
+
+
+# union() - | operator also can be used
+fruits = {"apple", "banana", "kiwi"}
+fruits2 = {"orange", "mango", "grapes"}
+print(fruits.union(fruits2))
+print(fruits | fruits2)
+
+# intersection() - & operator also can be used
+fruits = {"apple", "banana", "kiwi"}
+fruits2 = {"orange", "mango", "grapes"}
+print(fruits.intersection(fruits2))
+print(fruits & fruits2)
+
+# difference() - - operator
+fruits = {"apple", "banana", "kiwi"}
+fruits2 = {"orange", "mango", "grapes"}
+print(fruits.difference(fruits2))
+print(fruits2 - fruits)
+
+# symmetric_difference() - ^ operator
+fruits = {"apple", "banana", "kiwi"}
+fruits2 = {"orange", "mango", "grapes"}
+print(fruits.symmetric_difference(fruits2))
+print(fruits ^ fruits2)
+
+# update() - adds all items from fruits2 to fruits
+fruits = {"apple", "banana", "kiwi"}
+fruits2 = {"orange", "mango", "grapes"}
+fruits.update(fruits2)
 print(fruits)
+
+# discard() - removes if present, no error if not present
+fruits.discard("apple")
+print(fruits)
+
+# remove() - removes, but gives error if not present
+fruits.remove("banana")
+print(fruits)
+
+# isdisjoint() - True if no common items
+fruits = {"apple", "banana", "kiwi"}
+fruits2 = {"orange", "mango", "grapes"}
+print(fruits.isdisjoint(fruits2))
+
+# difference_update() - updates fruits with difference
+fruits = {"apple", "banana", "kiwi"}
+fruits2 = {"orange", "mango", "grapes"}
+fruits.difference_update(fruits2)
+print(fruits)
+
+# intersection_update()
+fruits = {"apple", "banana", "kiwi"}
+fruits2 = {"orange", "mango", "grapes"}
+fruits.intersection_update(fruits2)
+print(fruits)
+
+# symmetric_difference_update()
+fruits = {"apple", "banana", "kiwi"}
+fruits2 = {"orange", "mango", "grapes"}
+fruits.symmetric_difference_update(fruits2)
+print(fruits)
+
+# issubset()
+fruits = {"apple", "banana", "kiwi"}
+fruits2 = {"orange", "mango", "grapes"}
+print(fruits.issubset(fruits2))
+
+
+#issuperset()
+fruits = {"apple", "banana", "kiwi"}
+fruits2 = {"orange", "mango", "grapes"}
+print(fruits.issuperset(fruits2))
+
+# frozenset() methods
+#union
+fruits = frozenset({"apple", "banana", "kiwi"})
+fruits2 = frozenset({"orange", "mango", "grapes"})
+print(fruits.union(fruits2))
+
+#intersection
+fruits = frozenset({"apple", "banana", "kiwi"})
+fruits2 = frozenset({"orange", "mango", "grapes"})
+print(fruits.intersection(fruits2))
